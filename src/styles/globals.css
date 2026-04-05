@@ -1,0 +1,170 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --transition: 0.38s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+  font-family: 'Syne', sans-serif;
+  overflow: hidden; /* Desktop app - no scroll */
+  user-select: none; /* Desktop app feel */
+  -webkit-user-select: none;
+}
+
+/* Dark theme by default */
+body {
+  background: #080808;
+  color: #efefef;
+}
+
+/* Noise texture overlay */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 128px;
+  transition: opacity var(--transition);
+}
+
+/* Light theme */
+body.light {
+  background: #f5f4f1;
+  color: #111111;
+}
+
+body.light::before {
+  opacity: 0.018;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #252525;
+  border-radius: 4px;
+}
+
+body.light ::-webkit-scrollbar-thumb {
+  background: #dbd9d4;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2e2e2e;
+}
+
+/* Custom animations */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.22; }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Utility classes */
+.animate-fade-up {
+  animation: fadeUp 0.6s ease-out;
+}
+
+.animate-blink {
+  animation: blink 2.4s ease-in-out infinite;
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+/* Button styles */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 22px;
+  border-radius: 7px;
+  font-family: 'Syne', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: #efefef;
+  color: #080808;
+  border: none;
+}
+
+.btn-primary:hover {
+  background: #c8c8c8;
+  transform: translateY(-1px);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #aaaaaa;
+  border: 1.5px solid #2e2e2e;
+}
+
+.btn-secondary:hover {
+  background: #efefef;
+  color: #080808;
+  border-color: #efefef;
+}
+
+/* Light theme buttons */
+body.light .btn-primary {
+  background: #111111;
+  color: #f5f4f1;
+}
+
+body.light .btn-primary:hover {
+  background: #333333;
+}
+
+body.light .btn-secondary {
+  color: #555555;
+  border-color: #c8c5be;
+}
+
+body.light .btn-secondary:hover {
+  background: #111111;
+  color: #f5f4f1;
+  border-color: #111111;
+}
