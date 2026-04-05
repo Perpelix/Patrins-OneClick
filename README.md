@@ -1,8 +1,15 @@
 # Patrins OneClick Reset
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![GitHub issues](https://img.shields.io/github/issues/Perpelix/Patrins-OneClick)](https://github.com/Perpelix/Patrins-OneClick/issues)
+[![GitHub stars](https://img.shields.io/github/stars/Perpelix/Patrins-OneClick)](https://github.com/Perpelix/Patrins-OneClick/stargazers)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
+
 **Painless Windows Reset & Restore**
 
 Reset Windows without losing anything. Automatically backup and restore your apps, files, browser data, and settings.
+
+> 🎉 **Now Open Source!** This project was originally developed by Patrins and is now open to the community. We welcome contributions from developers worldwide!
 
 ---
 
@@ -204,13 +211,29 @@ Matches the Patrins OneClick website design:
 
 ## 🤝 Contributing
 
-This is a Patrins internal project. For issues or feature requests, contact the dev team.
+We welcome contributions from the community! Whether it's bug fixes, new features, or documentation improvements, all contributions are appreciated.
+
+### How to Contribute:
+
+1. **Fork the repository**
+2. **Create a feature branch**: `git checkout -b feature/amazing-feature`
+3. **Commit your changes**: `git commit -m 'Add some amazing feature'`
+4. **Push to the branch**: `git push origin feature/amazing-feature`
+5. **Open a Pull Request**
+
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines.
+
+### Reporting Issues:
+
+Found a bug or have a feature request? [Open an issue](https://github.com/Perpelix/Patrins-OneClick/issues) on GitHub.
 
 ---
 
 ## 📄 License
 
-Proprietary - Patrins © 2026
+MIT License - see [LICENSE](LICENSE) file for details.
+
+Open source and free to use, modify, and distribute!
 
 ---
 
